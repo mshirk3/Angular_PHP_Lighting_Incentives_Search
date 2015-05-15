@@ -8,29 +8,7 @@
   <script type='text/javascript' src='http://www.mattshirk.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
 
 
-<script type="text/javascript"> 
-jQuery(document).ready(function(){
 
-  
-  jQuery("ul.topnav li a").hover(function() { //When trigger is clicked...
-    
-    //Following events are applied to the subnav itself (moving subnav up and down)
-    jQuery(this).parent().find("ul.subnav").stop(true, true).slideDown('slow').show(); //Drop down the subnav on click
-
-    jQuery(this).parent().hover(function() {
-    }, function(){  
-      jQuery(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
-    });
-
-    //Following events are applied to the trigger (Hover events for the trigger)
-    }).hover(function() { 
-      jQuery(this).addClass("subhover"); //On hover over, add class "subhover"
-    }, function(){  //On Hover Out
-      jQuery(this).removeClass("subhover"); //On hover out, remove class "subhover"
-  });
-
-});
-</script>
 
 <style>
 
