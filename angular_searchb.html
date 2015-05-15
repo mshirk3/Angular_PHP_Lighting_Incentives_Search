@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/supplementalstyle.css">
+<style>
+ul.prereqs {
+padding:20px;
+border-radius:15px;
+background-color:#f6f6f6;
+}
+</style>
+</head>
+
+<body>
+
+
+<div ng-app="" ng-controller="incentivesController"> 
+<h1 style="text-align:center;">PG&E Lighting Replacement Incentives Search <br>using AngularJS, Bootstrap and PHP/MySQL</h1><h3 style="text-align:center; font-size:14px;">This simple, searchable, filterable and fully responsive list of PG&E Commercial Lighting Incentives was built using AngularJS, Bootstrap and PHP/MySQL.</h3><h4 style="text-align:center;"><a href="http://www.mattshirk.com/angular_test_incentive_selectb.php">View the nested JSON that populates the Incentives and Prerequisites</a></h4>
+
+<br><br>
+<div class="row-fluid">
+<div id="filters" class="col-md-4" style="vertical-align:top;">
+<h2 class="coolText" id="showing">Showing {{(names | filter:search).length}} out of {{names.length}}<br></h2>
+<h3 class="coolText" id="filtertext">Filter Results:</h3><h4><input id="search5" placeholder="Search Any Text" ng-model="search.$"><br><br>
+<input id="search1" placeholder="Search Titles Only" ng-model="search.Title"><br><br>
+<input id="search2" placeholder="Search Rebate Type" ng-model="search.RebateType"><br><br>
+<input id="search3" placeholder="Search Existing Lamps" ng-model="search.ExistingLightingType"><br><br>
+<input id="search4" placeholder="Search Replacement Lamps" ng-model="search.ReplacementLightingType"><br><br></p></div>
+<div id="incentives" class="col-md-8">
+<table class="table">
+  <tr ng-repeat="x in names | filter:search | orderBy:'IncentiveID'">
+    <td class="singleIncentive" style='border:2px solid grey;margin-bottom:20px;'><h2>{{x.Title}}</h2>
+	<div><div style='width:33%;display:inline-block;vertical-align:top;'><h4>Incentive Type: {{x.RebateType }}</h4><h4>Rebate Code: {{x.RebateCode }}</h4><h4>Outdoor Lighting: {{x.Outside }}</h4></div><div style='width:65%;display:inline-block;vertical-align:top;'><div style='width:32%;display:inline-block;vertical-align:top;'><img src='{{x.Lighting}}' align='left' style='padding-right:20px;'></div><div style='width:32%;display:inline-block;vertical-align:top;'><span style='font-size:60px;'><b>TO:</b></span></div><div style='width:32%;display:inline-block;vertical-align:top;'><img src='{{x.LightingR}}' align='left' style='padding-right:20px;'></div></div><br><br><p class="coolText">Description: {{x.LongDesc}}. {{x.Payback}}<br></p><div><h3 class="coolText" style="">Incentive Prerequisites</h3><ul class="prereqs" id="prereqs{{x.IncentiveID}}"><li class="singlePrereqs" ng-repeat="gch in x.Prereqs">{{gch.Prereq}}</li></ul></div></div></td>
+  </tr>
+</table></div>
+
+
+</div></div>
+
+<script>
+function incentivesController($scope,$http) {
+  $http.get("/angular_test_incentive_selectb.php")
+  .success(function(response) {$scope.names = response;});
+ 
+  
+ 
+}
+
+
+    
+
+
+</script>
+
+</body>
+</html>

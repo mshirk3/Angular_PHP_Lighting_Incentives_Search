@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel='stylesheet' id='twentythirteen-style-css'  href='http://www.mattshirk.com/wp-content/themes/twentythirteen-child/style.css?ver=2013-07-18' type='text/css' media='all' />
+  
+  <script type='text/javascript' src='http://www.mattshirk.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+
+
+<script type="text/javascript"> 
+jQuery(document).ready(function(){
+
+  
+  jQuery("ul.topnav li a").hover(function() { //When trigger is clicked...
+    
+    //Following events are applied to the subnav itself (moving subnav up and down)
+    jQuery(this).parent().find("ul.subnav").stop(true, true).slideDown('slow').show(); //Drop down the subnav on click
+
+    jQuery(this).parent().hover(function() {
+    }, function(){  
+      jQuery(this).parent().find("ul.subnav").slideUp('slow'); //When the mouse hovers out of the subnav, move it back up
+    });
+
+    //Following events are applied to the trigger (Hover events for the trigger)
+    }).hover(function() { 
+      jQuery(this).addClass("subhover"); //On hover over, add class "subhover"
+    }, function(){  //On Hover Out
+      jQuery(this).removeClass("subhover"); //On hover out, remove class "subhover"
+  });
+
+});
+</script>
+
+<style>
+
+html body {
+	line-height: auto !important;
+}
+</style>
+
+<link rel="stylesheet" href = "http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/supplementalstyle.css">
+<style>
+ul.prereqs {
+padding:20px;
+border-radius:15px;
+background-color:#f6f6f6;
+}
+</style>
+
+
+</head>
+
+<body style="">
+	<header id="masthead" class="site-header" role="banner" style="background:transparent;">
+      <a class="home-link" href="http://www.mattshirk.com/" title="Matthew Shirk" rel="home">
+        
+        <h2 style="padding-top:20px;" class="site-description">Matthew Shirk - UI/UX Web Developer - San Francisco - <span id="titleDate"></span></h2>
+      </a>
+
+      <div style="background-color:transparent;" id="navbar" class="navbar">
+      
+      <div id="mobile-menu">
+      <div id="int_centercolumn_wide">
+      
+      
+    <div id="selectorAboutMatt" onclick="window.open('/about-matt-shirk/','_self');">About Matt</div> 
+<p style="border-bottom:1px solid #dddddd;">&nbsp;</p>
+<div id="selectorAboutMattResume" onclick="window.open('/Matt_Shirk_Resume_MAY2015.htm','_self');">Resume</div> 
+<p style="border-bottom:1px solid #dddddd;">&nbsp;</p>
+<div id="selector3b" onclick="document.getElementById('horizontal-banner-containerb').style.display='block'; document.getElementById('selector3b').style.display='none'; document.getElementById('selector4b').style.display='block';">Web Development &amp; Design</div>
+<div id="selector4b" style="display:none;" onclick="document.getElementById('horizontal-banner-containerb').style.display='none'; document.getElementById('selector4b').style.display='none'; document.getElementById('selector3b').style.display='block';">Hide Web Development &amp; Design</div>
+<div id="horizontal-banner-containerb">
+<div class="mobile-menu-buttons"><a href="/matt-shirk-web-development/">Web Development</a></div>
+<div class="mobile-menu-buttons"><a href="/matt-shirk-user-interface-development/">User Interface Design</a></div>
+<div class="mobile-menu-buttons"><a href="/angular_searchc.html">AngularJS Example</a></div>
+<div class="mobile-menu-buttons"><a href="/parallax.html">Parallax Example</a></div>
+<div class="mobile-menu-buttons"><a href="/ajaxtestb.html">AJAX/XML Example</a></div>
+<div class="mobile-menu-buttons"><a href="/matt-shirk-web-advertising/">Web Advertising</a></div>
+<div class="mobile-menu-buttons"><a href="/matt-shirk-email-newsletters/">Email Newsletters</a></div>
+<div class="mobile-menu-buttons"><a href="/editorial-art/">Editorial Art</a></div>
+
+
+</div>
+<p style="border-bottom:1px solid #dddddd;">&nbsp;</p>        
+<!--<div id="selector1b" onclick="document.getElementById('horizontal-banner-containera').style.display='block'; document.getElementById('selector1b').style.display='none'; document.getElementById('selector2b').style.display='block';">Website Examples</div>
+<div id="selector2b" style="display:none;" onclick="document.getElementById('horizontal-banner-containera').style.display='none'; document.getElementById('selector2b').style.display='none'; document.getElementById('selector1b').style.display='block';">Hide Website Examples</div>
+<div id="horizontal-banner-containera">
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Waypoint Bldg Group </i><br><a href="http://waypointbuilding.com/main/">Waypoint Bldg Group</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Sunland International </i><br><a href="http://www.digistor.com">Digistor.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Alpha Orthotics Corp </i><br><a href="http://www.alphaorthotics.com">AlphaOrthotics.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Alpha Orthotics Corp </i><br><a href="http://www.bunion-aid.com">Bunion-Aid.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Purity Cosmetics </i><br><a href="http://www.100percentpure.com">100PercentPure.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Skates on Haight Inc </i><br><a href="http://www.skates.com">www.skates.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Skates on Haight Inc </i><br><a href="http://www.skates.com">www.skatesonhaight.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Skates on Haight Inc </i><br><a href="http://www.skates.com">www.rollerskates.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">Cypress Media Inc </i><br><a href="http://www.cmipromotions.com">www.CMIPromotions.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">UGO Entertainment/Hearst </i><br><a href="http://www.1up.com">www.1up.com</a></div>
+<div class="mobile-menu-buttons"><i style="color:#cccccc;">World Golf Tour </i><br><a href="http://www.wgt.com">www.WorldGolfTour.com</a></div>
+
+</div>
+<p style="border-bottom:1px solid #dddddd;">&nbsp;</p>-->
+
+
+
+</div>
+</div>
+        <div id="navcontainer">
+<ul class="topnav">
+            <li style="padding-left:40px;">
+                <a style="text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; text-align:center;color:white; text-shadow:2px 1px 0px #000" href="/about-matt-shirk/">About Matt</a>
+                <ul class="subnav" style="width:auto; border: none; background:transparent;">
+                    
+                    <li class="one" style="border-bottom: none; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95; text-align:center;" href="/about-matt-shirk/">About</a></li>
+                    <li class="one" style="border-bottom: none; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: none; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; border-bottom-right-radius:15px; border-bottom-left-radius:15px; -moz-border-radius-bottomleft: 15px; -moz-border-radius-bottomright:15px; opacity:0.95; padding-bottom:12px; text-align:center;" href="/Matt_Shirk_Resume_MAY2015.htm">Resume</a></li>
+                </ul>
+            </li>
+            <li>
+                <a style="text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px;color:white; text-shadow:2px 1px 0px #000" href="/matt-shirk-web-development/">Website Development</a>
+                <ul class="subnav" style="width:auto; background: transparent; border: none; left:16px;">
+                <li class="two" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:16px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="/matt-shirk-web-development/">Website Examples</a></li>
+				<li class="two" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:16px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href=" /matt-shirk-user-interface-development/">User Interface Design</a></li>
+				<li class="two" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:16px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="/angular_searchc.html">AngularJS Example</a></li>
+				<li class="two" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:16px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="/ajaxtestb.html">AJAX/XML Example</a></li>
+                <li class="two" style="border-bottom: 0px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: none; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; border-bottom-right-radius:15px; border-bottom-left-radius:15px; -moz-border-radius-bottomleft: 15px; -moz-border-radius-bottomright:15px; opacity:0.95; padding-bottom:12px;" href="/parallax.html">Parallax Example</a></li>
+                </ul>
+            </li>
+            <li><a style="text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px;color:white; text-shadow:2px 1px 0px #000" href="/matt-shirk-web-advertising/">Promotional Work</a>
+            <ul class="subnav" style="width:auto; background: transparent; border: none; left:14px;">
+           
+                    <li class="three" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="/matt-shirk-web-advertising/">Web Advertising</a></li>
+                    <li class="three" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="/matt-shirk-email-newsletters/">Email Newsletters</a></li>
+                    <li class="three" style="border-bottom: 0px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: none; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; border-bottom-right-radius:15px; border-bottom-left-radius:15px; -moz-border-radius-bottomleft: 15px; -moz-border-radius-bottomright:15px; opacity:0.95; padding-bottom:12px;" href="/editorial-art/">Editorial Art</a></li>
+                    
+                </ul></li>
+                
+                <li><a style="text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px;color:white; text-shadow:2px 1px 0px #000" href="javascript:null(0)">eCommerce Solutions</a>
+            <ul class="subnav" style="background: transparent; border: none; width:auto; left:15px;">
+                    <li class="five" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.digistor.com"><span style="float:none; width:auto; height:auto; background-image:none; font-weight:normal;"><i>Netsuite</i></span><br>Digistor.com</a></li>
+                    <li class="five" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.100percentpure.com"><span style="float:none; width:auto; height:auto; background-image:none; font-weight:normal;"><i>Volusion</i></span><br>100PercentPure.com</a></li>
+                    <li class="five" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.skates.com"><span style="float:none; width:auto; height:auto; background-image:none; font-weight:normal;"><i>Volusion</i></span><br>Skates.com</a></li>
+                    <li class="five" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.mattshirk.com/pp/"><span style="float:none; width:auto; height:auto; background-image:none; font-weight:normal;"><i>WP-eCommerce</i></span><br>PendantsandPearls.com</a></li>
+                    <li class="five" style="border-bottom: none; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: none; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; border-bottom-right-radius:15px; border-bottom-left-radius:15px; -moz-border-radius-bottomleft: 15px; -moz-border-radius-bottomright:15px; opacity:0.95; padding-bottom:12px;" href="http://www.alphaorthotics.com"><span style="float:none; width:auto; height:auto; background-image:none; font-weight:normal;"><i>Shopify</i></span><br>AlphaOrthotics.com</a></li>
+                </ul></li>
+                
+                
+            <li><a style="text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px;color:white; text-shadow:2px 1px 0px #000" href="javascript:null(0)">Blogs</a>
+            <ul class="subnav" style="width:auto; background: transparent; border: none;">
+            <li class="four" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://waypointbuilding.com/main/news/">Waypoint Blog</a></li>
+                    <li class="four" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://blog.digistor.com">Digistor Blog</a></li>
+                    <li class="four" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.cmipromotions.com/category/blog/">CMI Promo Blog</a></li>
+                    <li class="four" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.bunionadvisor.com/blog">Bunion Advisor</a></li>
+                    <li class="four" style="border-bottom: 1px solid #fff; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: 1px solid #fff; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; opacity:0.95;" href="http://www.glossylocks.com/Purity_Cosmetics_Blog/">100% Pure Blog</a></li>
+                    <li class="four" style="border-bottom: none; border-top: 1px solid #fff;"><a style="line-height:14px; border-bottom: none; border-top: 1px solid #fff; text-decoration:none; font-family:arial; font-weight: bold; text-size: 12px; border-bottom-right-radius:15px; border-bottom-left-radius:15px; -moz-border-radius-bottomleft: 15px; -moz-border-radius-bottomright:15px; opacity:0.95; padding-bottom:12px;" href="https://twitter.com/shirkmatt">Matt on Twitter</a></li>
+                </ul></li>
+            
+        </ul>
+
+</div><!-- #site-navigation -->
+      </div><!-- #navbar -->
+    </header>
+
+
+<div ng-app="" ng-controller="incentivesController"> 
+<h1 id="coolTitle" style="text-align:center; margin-right:auto; margin-left:auto; width:90%;">PG&E Incentives Search using AngularJS, Bootstrap and PHP/MySQL</h1><h3 style="text-align:center; text-decoration:none;">A simple, searchable and filterable list of Commercial Lighting Incentives using AngularJS, Bootstrap and PHP/MySQL.</h3><h4 style="text-align:center;"><a href="http://www.mattshirk.com/angular_test_incentive_selectb.php">View the nested JSON that populates the Incentives and Prerequisites</a></h4>
+
+
+<div class="row-fluid">
+<div id="filters" class="col-md-4" style="vertical-align:top;">
+<h3 class="coolText" id="filtertext">Filter Results:</h3><h4><input id="search5" placeholder="Search Any Text" ng-model="search.$"><br><br>
+<input id="search1" placeholder="Search Titles Only" ng-model="search.Title"><br><br>
+<input id="search2" placeholder="Search Rebate Type" ng-model="search.RebateType"><br><br>
+<input id="search3" placeholder="Search Existing Lamps" ng-model="search.ExistingLightingType"><br><br>
+<input id="search4" placeholder="Search Replacement Lamps" ng-model="search.ReplacementLightingType"><br><br></p></div>
+<div id="incentives" class="col-md-8"><h2 class="coolText" id="showing">Showing {{(names | filter:search).length}} out of {{names.length}}<br></h2>
+<table class="table">
+  <tr ng-repeat="x in names | filter:search | orderBy:'IncentiveID'">
+    <td class="singleIncentive" style='border:2px solid grey;margin-bottom:20px;'><h2>{{x.Title}}</h2>
+	<div><div style='width:33%;display:inline-block;vertical-align:top;'><h4>Incentive Type: {{x.RebateType }}</h4><h4>Rebate Code: {{x.RebateCode }}</h4><h4>Outdoor Lighting: {{x.Outside }}</h4></div><div style='width:65%;display:inline-block;vertical-align:top;'><div style='width:32%;display:inline-block;vertical-align:top;'><img src='{{x.Lighting}}' align='left' style='padding-right:20px;'></div><div style='width:32%;display:inline-block;vertical-align:top;'><span style='font-size:60px;'><b>TO:</b></span></div><div style='width:32%;display:inline-block;vertical-align:top;'><img src='{{x.LightingR}}' align='left' style='padding-right:20px;'></div></div><br><br><p class="coolText">Description: {{x.LongDesc}}. {{x.Payback}}<br></p><div><h3 class="coolText" style="">Incentive Prerequisites</h3><ul style="" class="prereqs" id="prereqs{{x.IncentiveID}}"><li class="singlePrereqs" ng-repeat="gch in x.Prereqs">{{gch.Prereq}}</li></ul></div></div></td>
+  </tr>
+</table></div>
+
+
+</div></div>
+
+<script>
+function incentivesController($scope,$http) {
+  $http.get("/angular_test_incentive_selectb.php")
+  .success(function(response) {$scope.names = response;});
+ 
+  
+ 
+}
+
+
+    
+
+
+</script>
+<script>
+var d = new Date();
+
+var dd = d.toDateString();
+
+var ddd = dd.split(' '); 
+
+ddd.shift();
+
+var mon = ddd[0];
+var da = ddd[1];
+var yr =ddd[2];
+
+if (mon == "Jan"){monb = 1;}
+if (mon == "Feb"){monb = 2;}
+if (mon == "Mar"){monb = 3;}
+if (mon == "Apr"){monb = 4;}
+if (mon == "May"){monb = 5;}
+if (mon == "Jun"){monb = 6;}
+if (mon == "Jul"){monb = 7;}
+if (mon == "Aug"){monb = 8;}
+if (mon == "Sep"){monb = 9;}
+if (mon == "Oct"){monb = 10;}
+if (mon == "Nov"){monb = 11;}
+if (mon == "Dec"){monb = 12;}
+
+slashDate = monb + "/" + da + "/" + yr;
+
+document.getElementById('titleDate').innerHTML = slashDate;
+</script>
+
+</body>
+</html>
