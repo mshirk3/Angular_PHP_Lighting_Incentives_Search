@@ -1,4 +1,4 @@
- Angular Lighting Incentives Search - Versions A, B and C
+ Angular Lighting Incentives Search - Latest Version is Angular_SearchC.html
 
 This includes 3 versions of my Lighting Incentives Search page using
 AngularJS, PHP and MySQL. The most recent version is Angular_searchc.html.
